@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息填写</title>
+</head>
+
+
+<body>
+<font size="6" face="楷体" color="black"><center>个人信息填写</center></font>
+
+<form method="post" action="redirect.php">
+    <table align="center" border="1" bordercolor="pink" width="50%"
+           cellpadding="1" cellspacing="0">
+
+        <tr>
+            <td align=right>昵     称:</td>
+            <td><input type="text" name="XH"></td>
+        </tr>
+        <tr>
+            <td align=right> 性    别:</td>
+            <td><input type="radio" name="gender" value="0" checked>男 <input type="radio"
+                                                                   name="gender" value="1">女</td>
+        </tr>
+
+        <tr>
+            <td align="right">出生年月:</td>
+            <td colspan="3"><input id="hello" name="birthday"></td>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                <center><input type="submit" name="B1" value="提交">&nbsp &nbsp &nbsp
+                    <input type="reset" name="B2" value="重置"></center>
+            </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>

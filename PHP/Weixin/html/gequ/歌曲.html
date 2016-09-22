@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    * {
+        margin:0 0;
+        padding:0 0;
+    }
+    #list {
+        width:100%;
+        margin:0 auto 0;
+        list-style-type:none;
+    }
+    #list li{
+        border: 1px solid #dddddd;
+    }
+    #list li img{
+        width: 20px;
+        height: 20px;
+    }
+    #list li div{
+        float: left;
+        margin-left: 100px;
+    }
+    #list li div a{
+        margin-left: 10px;
+    }
+    #list .show {
+        height: 22px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #CCCCFF;
+    }
+    #list .hide{
+        height: 50px;
+        line-height: 50px;
+        display: none;
+       background-color: #979797;
+      }
+    #list input {
+        clear:both;
+        float:left;
+        height:22px;
+    }
+    #list span {
+        display:block;
+        height:22px;
+        line-height:22px;
+        width:300px;
+    }
+    #list h2 {
+        float:left;
+        font-size:22px;
+        line-height:22px;
+        margin:0 0 0 10px;
+    }
+    #list strong {
+        float:right;
+    }
+    #list li.pox {
+        background:#ccc;
+    }
+
+</style>
+<script  src="jquery-2.1.4.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".show").click(function(){
+            $(this).next(".hide").slideToggle().siblings(".hide").hide();
+
+        });
+    });
+</script>
+<body>
+<ul id="list">
+    <li class="show"><h2>私奔</h2></li>
+    <li class="hide"><div><img src="image/icon_succeed_green.png"/><a>试听</a></div><div><img src="image/icon_succeed_green.png"/><a>试听</a></div><div><img src="image/icon_succeed_green.png"/><a>试听</a></div></li>
+    <li class="show"><h2>北京北京</h2></li>
+    <li class="hide"></li>
+    <li class="show"><h2>我爱你中国</h2></li>
+    <li class="hide"></li>
+    <li class="show"><h2>花火</h2></li>
+    <li class="hide"></li>
+    <li class="show"><h2>回来</h2></li>
+    <li class="hide"></li>
+    <li class="show"><h2>爱要有你才完美</h2></li>
+    <li class="hide"></li>
+</ul>
+</body>
+</html>

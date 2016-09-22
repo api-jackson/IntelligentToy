@@ -1,0 +1,1 @@
+CREATE OR REPLACE VIEW user_all_data_view AS SELECT user_data.UserId, user_data.UserName, user_data.WXUserId, user_birthday.NickName, user_birthday.Sex, user_birthday.Birthday, user_birthday.Age, device_data.DeviceId, device_data.DeviceState FROM user_data, device_data, user_birthday WHERE user_data.UserId = device_data.DeviceOwner AND user_data.UserId = user_birthday.UserId;

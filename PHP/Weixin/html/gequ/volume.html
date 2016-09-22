@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            width: 100%;
+        }
+        .content{
+            width: 40%;
+            margin: 0 30%;
+        }
+        .minus,.add{
+            margin-top: 5px;
+            width: 156px;
+            height: 156px;
+            float: left;
+        }
+        .add{
+            margin-left: 30px;
+        }
+        .minus{
+            margin-right: 30px;
+        }
+        .jindu li{
+            list-style: none;
+            width: 20px;
+            height: 156px;
+            background-color: #cccccc;
+            float: left;
+            margin: 5px;
+        }
+        .jindu img{
+            width: 20px;
+            height: 156px;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oLi = document.getElementsByTagName('li');
+
+            oLi[0].style.backgroundColor = 'lightskyblue';
+            oLi[1].style.backgroundColor = 'lightskyblue';
+            oLi[2].style.backgroundColor = 'lightskyblue';
+            oLi[3].style.backgroundColor = 'lightskyblue';
+
+            var oMinus = document.getElementsByClassName('minus')[0];
+            var oAdd = document.getElementsByClassName('add')[0];
+            var i = 4;
+            oMinus.onclick = function(){
+                if(i>0){
+                    i--;
+                    oLi[i].style.backgroundColor = '#CCC';
+                }
+            };
+            oMinus.onmousedown = function(){
+                oMinus.src = 'image/vol_sub_n.png';
+            };
+            oMinus.onmouseup = function(){
+                oMinus.src = 'image/vol_sub_d.png';
+            }
+            oAdd.onclick = function() {
+                if (i < 7) {
+                    oLi[i].style.backgroundColor = 'lightskyblue';
+                    i++;
+                }
+            }
+            oAdd.onmousedown = function(){
+                oAdd.src = 'image/vol_add_n.png';
+            };
+            oAdd.onmouseup = function(){
+                oAdd.src = 'image/vol_add_d.png';
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div class="content">
+    <img class="minus" src="image/vol_sub_d.png">
+        <ul class="jindu">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    <img class="add" src="image/vol_add_d.png"/>
+</div>
+</body>
+</html>
